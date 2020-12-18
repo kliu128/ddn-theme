@@ -88,5 +88,8 @@
                 "width": 2000
             }
         }
+    },
+    "dependencies": {
+        "tailwindcss": "^2.0.1"
     }
 }

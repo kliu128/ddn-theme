@@ -1,40 +1,19 @@
-<nav class="site-nav">
-    <div class="site-nav-left-wrapper">
-        <div class="site-nav-left">
-            {{#if @site.logo}}
-                <a class="site-nav-logo" href="{{@site.url}}"><img src="{{@site.logo}}" alt="{{@site.title}}" /></a>
-            {{else}}
-                <a class="site-nav-logo" href="{{@site.url}}">{{@site.title}}</a>
-            {{/if}}
-            <div class="site-nav-content">
-                {{#if @site.navigation}}
-                    {{navigation}}
-                {{/if}}
-                {{#is "post"}}
-                    <span class="nav-post-title {{#unless @site.logo}}dash{{/unless}}">{{post.title}}</span>
-                {{/is}}
-            </div>
-        </div>
-    </div>
-    <div class="site-nav-right">
-        {{#if @site.secondary_navigation}}
-            {{navigation type="secondary"}}
-        {{else}}
-            <div class="social-links">
-                {{#if @site.facebook}}
-                    <a class="social-link social-link-fb" href="{{facebook_url @site.facebook}}" title="Facebook" target="_blank" rel="noopener">{{> "icons/facebook"}}</a>
-                {{/if}}
-                {{#if @site.twitter}}
-                    <a class="social-link social-link-tw" href="{{twitter_url @site.twitter}}" title="Twitter" target="_blank" rel="noopener">{{> "icons/twitter"}}</a>
-                {{/if}}
-            </div>
-            {{#unless @labs.members}}
-                <a class="rss-button" href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="RSS" target="_blank" rel="noopener">{{> "icons/rss"}}</a>
-            {{/unless}}
-        {{/if}}
+<header class="text-orange container p-4 mx-auto">
 
-        {{#if @labs.members}}
-            <a class="subscribe-button" href="#subscribe">Subscribe</a>
-        {{/if}}
+    <h1 class="font-title font-bold text-7xl flex items-center">
+        <img class="mr-4" width="100" src="{{img_url @site.logo size="l"}}"
+            alt="" />
+        <a href="/">{{ @site.title }}</a>
+    </h1>
+</header>
+
+<nav class="border-orange border-b-8">
+    <div class="flex container p-4 mx-auto text-orange text-2xl uppercase font-bold">
+        {{navigation}}
+
+        <div class="text-white text-xl">
+            <a class="bg-red-800 p-2 px-4 rounded-xl" href="https://tiktok.com/@dailydosenews">Shop</a>
+            <a class="bg-green-600 p-2 px-4 rounded-xl" href="https://tiktok.com/@dailydosenews">Subscribe</a>
+        </div>
     </div>
 </nav>
