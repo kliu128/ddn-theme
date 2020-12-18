@@ -1,4 +1,5 @@
 dependencies:
+  '@tailwindcss/typography': 0.3.1_tailwindcss@2.0.1
   tailwindcss: 2.0.1_aa9bebf9c32c31979a0835c309fb5f97
 devDependencies:
   '@tryghost/release-utils': 0.6.8
@@ -107,6 +108,14 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-F2gnHIAWbjiowcAgxz3VpKxY/NQ39NTujEd/NPnRTWlRynLFg3bAV+UvZFXljhYJeN3b/zRlScNDcpCWTrtZGw==
+  /@tailwindcss/typography/0.3.1_tailwindcss@2.0.1:
+    dependencies:
+      tailwindcss: 2.0.1_aa9bebf9c32c31979a0835c309fb5f97
+    dev: false
+    peerDependencies:
+      tailwindcss: 2.0.0-alpha.24 || ^2.0.0
+    resolution:
+      integrity: sha512-HyZ+3Eay8SGaPq7kcFoANZLr4EjeXQ19yjjb9fp6B0PHHpvZoe00jdsnpnooMEbx9J5rQ93nxPUG3MQmXVxGMQ==
   /@tryghost/pretty-cli/1.2.10:
     dependencies:
       chalk: 4.1.0
@@ -5724,6 +5733,7 @@ packages:
     resolution:
       integrity: sha512-r+JdDipt93ttDjsOVPU5zaq5bAyY+3H19bDrThkvuVxC0xMQzU1PJcS6D+KrP3u96gH9XLomcHPb+2skoDjulQ==
 specifiers:
+  '@tailwindcss/typography': ^0.3.1
   '@tryghost/release-utils': 0.6.8
   autoprefixer: 10.0.4
   beeper: 2.0.0
