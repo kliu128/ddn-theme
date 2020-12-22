@@ -26,8 +26,16 @@
 
     {{!-- The footer at the very bottom of the screen --}}
     <footer class="bg-gray-700">
-        <div class="container p-4 mx-auto">
-            <a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}
+        <div class="container p-4 mx-auto grid grid-cols-3">
+            <div class="col-span-2">
+                <a href="{{@site.url}}">{{@site.title}}</a> &copy; {{date format="YYYY"}}
+            </div>
+            <div class="text-left w-1/5">
+                <ul>
+                    <li><a href="https://tiktok.com/@dailydosenews">TikTok</a></li>
+                    <li><a href="https://instagram.com/dailydosenews/">Instagram</a></li>
+                </ul>
+            </div>
         </div>
     </footer>
 
@@ -119,10 +127,13 @@
         });
     </script>
 
-    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already loaded. --}}
+    {{!-- The #block helper will pull in data from the #contentFor other template files. In this case, there's some
+    JavaScript which we only want to use in post.hbs, but it needs to be included down here, after jQuery has already
+    loaded. --}}
     {{{block "scripts"}}}
 
-    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
+    {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the
+    closing body tag --}}
     {{ghost_foot}}
 
 </body>

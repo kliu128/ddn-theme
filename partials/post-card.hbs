@@ -1,7 +1,11 @@
 <article
-    class="relative inline-block w-96 m-4 {{post_class}} {{#unless feature_image}}no-image{{else}}{{#is "home"}}{{#has index="nth:6"}}post-card-large{{/has}}{{/is}}{{/unless}}">
-
+    class="relative inline-block w-96 m-4 overflow-none {{post_class}} {{#unless feature_image}}no-image{{else}}{{#is "home"}}{{#has index="nth:6"}}post-card-large{{/has}}{{/is}}{{/unless}}">
     {{#if feature_image}}
+                {{#if primary_tag}}
+                {{#primary_tag}}
+                <a class="github-fork-ribbon uppercase" data-ribbon="{{name}}" title="{{name}}">{{name}}</a> 
+                    {{/primary_tag}}
+                {{/if}}
     <a href="{{url}}">
         {{!-- This is a responsive image, it loads different sizes depending on device
         https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
