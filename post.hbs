@@ -6,7 +6,7 @@
     {{!-- Everything inside the #post tags pulls data from the post --}}
     {{#post}}
 
-    <main class="container mx-auto m-3">
+    <main class="max-w-screen-lg w-full mx-auto m-3">
         <article class="{{post_class}} {{#unless feature_image}}no-image{{/unless}}">
             <header>
 
@@ -24,8 +24,9 @@
                     {{!-- This is a responsive image, it loads different sizes depending on device
                     https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433
                     --}}
-                    <img srcset="{{img_url feature_image size=" s"}} 300w, {{img_url feature_image size="m" }} 600w,
-                        {{img_url feature_image size="l" }} 1000w, {{img_url feature_image size="xl" }} 2000w" sizes="(max-width: 800px) 400px,
+                    <img class="w-full" srcset="{{img_url feature_image size=" s"}} 300w, {{img_url feature_image
+                        size="m" }} 600w, {{img_url feature_image size="l" }} 1000w, {{img_url feature_image size="xl"
+                        }} 2000w" sizes="(max-width: 800px) 400px,
                         (max-width: 1170px) 1170px,
                             2000px" src="{{img_url feature_image size=" xl"}}" alt="{{title}}" />
                 </figure>
