@@ -32673,6 +32673,11 @@ video {
           animation: bounce 1s infinite;
 }
 
+.post:first-child,
+.post:first-child img {
+  width: 100%;
+}
+
 .nav {
   display: flex;
   list-style-type: none;
