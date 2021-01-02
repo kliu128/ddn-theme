@@ -1,20 +1,23 @@
 <article
-    class="relative inline-block w-96 m-4 overflow-none {{post_class}} {{#unless feature_image}}no-image{{else}}{{#is "home"}}{{#has index="nth:6"}}post-card-large{{/has}}{{/is}}{{/unless}}">
+    class="relative inline-block w-96 m-4 overflow-none {{post_class}} {{#unless feature_image}}no-image{{else}}{{#is "
+    home"}}{{#has index="nth:6" }}post-card-large{{/has}}{{/is}}{{/unless}}">
     {{#if feature_image}}
-                {{#if primary_tag}}
-                {{#primary_tag}}
-                <a class="github-fork-ribbon uppercase" data-ribbon="{{name}}" title="{{name}}">{{name}}</a> 
-                    {{/primary_tag}}
-                {{/if}}
+    {{#if primary_tag}}
+    {{#primary_tag}}
+    <a class="github-fork-ribbon uppercase" data-ribbon="{{name}}" title="{{name}}">{{name}}</a>
+    {{/primary_tag}}
+    {{/if}}
     <a href="{{url}}">
         {{!-- This is a responsive image, it loads different sizes depending on device
         https://medium.freecodecamp.org/a-guide-to-responsive-images-with-ready-to-use-templates-c400bd65c433 --}}
-        <img class="pl-3 pb-3" srcset="{{img_url feature_image size="s"}} 300w,
-                    {{img_url feature_image size="m"}} 600w,
-                    {{img_url feature_image size="l"}} 1000w,
-                    {{img_url feature_image size="xl"}} 2000w" sizes="(max-width: 1000px) 400px, 700px" loading="lazy"
-            src="{{img_url feature_image size="m"}}" alt="{{title}}" />
-        <span class="bg-green-800 inline-block p-3 uppercase font-bold absolute bottom-0 left-0">{{title}}</span>
+        <img class="pl-3 pb-3" srcset="{{img_url feature_image size=" s"}} 300w, {{img_url feature_image size="m" }}
+            600w, {{img_url feature_image size="l" }} 1000w, {{img_url feature_image size="xl" }} 2000w"
+            sizes="(max-width: 1000px) 400px, 700px" loading="lazy" src="{{img_url feature_image size=" m"}}"
+            alt="{{title}}" />
+        <span class="uppercase font-bold absolute bottom-0 left-0 flex">
+            <span class="bg-green-800 p-3">{{title}}</span>
+            <span class="bg-green-900 p-3">{{date format="MM/DD"}}</span>
+        </span>
     </a>
     {{/if}}
 </article>
